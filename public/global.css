@@ -1,0 +1,21 @@
+html, body {
+	--blue: #2d83a1;
+	--soft-gray: #f7efed;
+	--light-black: #293249;
+
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.bg-1{
+	background-color: var(--soft-gray);
+}
+
+.bg-2{
+	background-color: var(--light-black);
+}
+.light-text{
+	color: var(--soft-gray);
+}
+.dark-text{
+	color: var(--light-black);
+}
