@@ -24,13 +24,13 @@
 </script>
 <svelte:window  bind:scrollY={scrollValue}/>
 <main class="text-gray-600" on:click={onClick}>
-    <div class="flex justify-start bg-1 h-screen dark-text px-8" bind:clientHeight={heroSectionHeight}>
+    <div class="flex justify-start bg-1 mobile-width md:h-screen dark-text px-8" bind:clientHeight={heroSectionHeight}>
         <div class="flex flex-col w-4/5">
         {#if scrollValue < heroSectionHeight/2}
             <div class="flex justify-between items-start mb-10" transition:fade>
                 <h1 in:fly="{{x: 80, duration: 600 }}" out:fly="{{x: -80, duration: 600 }}" class="w-full text-4xl">Portfolio</h1>
             </div>
-            <h1 in:fly="{{x: -80, duration: 600 }}" out:fly="{{x: 80, duration: 600 }}" class="text-4xl my-40">Hi, I’m 
+            <h1 in:fly="{{x: -80, duration: 600 }}" out:fly="{{x: 80, duration: 600 }}" class="text-2xl sm:text-4xl my-40">Hi, I’m 
                 <span class="font-semibold">Yanis</span> 
                 <br/> and I help people transform their ideas into <br/> 
                 <span class="font-semibold">websites</span> and 
@@ -93,7 +93,7 @@
                     <p class="text-xl">App With</p>
                     <div class="flex flex-row justify-center my-2">
                         <object type="image/svg+xml" data="ressources/flutter.svg" class="logo"></object>
-                        <object type="image/svg+xml" data="ressources/css-3.svg" class="logo mx-1"></object>
+                        <object type="image/svg+xml" data="ressources/nativescript.svg" class="logo mx-1"></object>
                     </div>
 
                     <p class="text-xl my-2">Back-End</p>
