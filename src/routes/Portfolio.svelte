@@ -65,7 +65,7 @@
                 <div>
                     <h1 class="text-2xl text-center mb-5">Web Development</h1>
 
-                    <p class="text-lg">Android application development, including everything from the design to the deployment.</p>
+                    <p class="text-lg">Complete website development including backend using these technologies.</p>
                 </div>
                 <div>
                     <p class="text-xl">Front-End</p>
@@ -92,8 +92,7 @@
                 
                 <div>
                     <h1 class="text-2xl text-center mb-5">Mobile Development</h1>
-
-                    <p class="text-lg">Complete website development including backend using these technologies</p>
+                    <p class="text-lg">Android application development, including everything from the design to the deployment.</p>
                 </div>
 
                 <div>
