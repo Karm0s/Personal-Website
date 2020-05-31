@@ -3,7 +3,7 @@ html, body {
 	--soft-gray: #f7efed;
 	--light-black: #293249;
 
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: 'Lato', Roboto, Oxygen-Sans, sans-serif;
 }
 
 .bg-1{

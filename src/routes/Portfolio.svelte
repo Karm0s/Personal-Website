@@ -24,7 +24,9 @@
 </script>
 <svelte:window  bind:scrollY={scrollValue}/>
 <main class="text-gray-600" on:click={onClick}>
+    <!-- Hero section  -->
     <div class="flex justify-start bg-1 mobile-width md:h-screen dark-text px-8" bind:clientHeight={heroSectionHeight}>
+        <!-- left side -->
         <div class="flex flex-col w-4/5">
         {#if scrollValue < heroSectionHeight/2}
             <div class="flex justify-between items-start mb-10" transition:fade>
@@ -38,6 +40,8 @@
             </h1>
         {/if}
         </div>
+
+        <!-- right side -->
         <div class="flex justify-start flex-col items-end w-1/5">
             <BurgerButton class="" onClick={showMenu}/>
             {#if dropDownVisible}
@@ -46,9 +50,11 @@
             </div>
             {/if}
         </div>
+
     </div>
 
-	<div class="flex flex-col justify-center skills-section section bg-2 light-text pb-10 mobile-width md:h-screen">
+    <!-- Skills section -->
+	<div class="flex flex-col justify-center skills-section section bg-2 light-text pb-10 mobile-width lg:h-screen">
         {#if scrollValue > heroSectionHeight/2 && scrollValue < heroSectionHeight*1.5}
         <h1 in:fly="{{x: 80, duration: 600 }}" out:fly="{{x: -80, duration: 600 }}" class="w-full text-center text-4xl mb-10">My Skills</h1>
 
@@ -70,6 +76,7 @@
                         <object type="image/svg+xml" data="ressources/bootstrap-4.svg" class="logo mx-1"></object>
                         <object type="image/svg+xml" data="ressources/svelte.svg" class="logo mx-1"></object>
                         <object type="image/svg+xml" data="ressources/bulma.svg" class="logo mx-1"></object>
+                        <object type="image/svg+xml" data="ressources/tailwind.svg" class="logo mx-1"></object>
                     </div>
 
                     <p class="text-xl my-2">Back-End</p>
@@ -104,7 +111,7 @@
                 
                 </div>
             </div>
-            <div in:fly="{{y: 80, duration: 600 }}" out:fly="{{y: -80, duration: 600 }}" class="flex flex-col justify-between rounded-lg shadow-lg lg:w-1/3 text-center px-1 my-3 mx-5 bg-1 dark-text max-w-sm">
+            <div in:fly="{{y: 80, duration: 600 }}" out:fly="{{y: -80, duration: 600 }}" class="python-card flex flex-col justify-between rounded-lg shadow-lg lg:w-1/3 text-center px-1 my-3 mx-5 bg-1 dark-text max-w-sm">
                 
                 <div>
                     <h1 class="text-2xl text-center mb-5">Python Scripting</h1>
@@ -113,21 +120,12 @@
                 </div>
 
                 <div>
-                    <p class="text-xl">Front-End</p>
+                    <p class="text-xl">With</p>
                     <div class="flex flex-row justify-center my-2">
-                        <object type="image/svg+xml" data="ressources/html-5.svg" class="logo"></object>
-                        <object type="image/svg+xml" data="ressources/css-3.svg" class="logo mx-1"></object>
-                        <object type="image/svg+xml" data="ressources/javascript.svg" class="logo mx-1"></object>
-                        <object type="image/svg+xml" data="ressources/bootstrap-4.svg" class="logo mx-1"></object>
-                        <object type="image/svg+xml" data="ressources/svelte.svg" class="logo mx-1"></object>
-                        <object type="image/svg+xml" data="ressources/bulma.svg" class="logo mx-1"></object>
-                    </div>
-
-                    <p class="text-xl my-2">Back-End</p>
-                    <div class="flex flex-row justify-center my-2">
-                        <object type="image/svg+xml" data="ressources/django.svg" class="logo"></object>
                         <object type="image/svg+xml" data="ressources/python-5.svg" class="logo"></object>
                     </div>
+                    <p class="text-xl">And</p>
+                    <p class="text-md text-center my-2">All the tons of availible python packages.</p>
                 
                 </div>
             </div>
@@ -135,7 +133,8 @@
         {/if}
 	</div>
 
-	<div class="flex flex-col justify-center projects-section section dark-text pb-10 bg-1 mobile-width md:h-screen">
+    <!-- Projects section -->
+	<div class="flex flex-col justify-center projects-section section dark-text pb-10 bg-1 mobile-width lg:h-screen">
         {#if scrollValue > heroSectionHeight*1.5 && scrollValue < heroSectionHeight*2.5}
         <h1 in:fly="{{x: -80, duration: 600 }}" out:fly="{{x: 80, duration: 600 }}" class="w-full text-center text-4xl mb-10">My Projects</h1>
 
@@ -146,11 +145,14 @@
                 <div>
                     <h1 class="text-2xl text-center mb-5">Ultimate Watchlist</h1>
 
-                    <p class="text-lg">A mobile app made using <br/> native-script (svelte-native) with tmdb api integration.</p>
+                    <p class="text-lg">A mobile app made using <br/> nativescript (svelte-native) with tmdb api integration.</p>
                 </div>
                 <div class="">
-                    <p class="text-lg my-2 text-left">App: <a class="text-gray-600 underline" href="" target="blank">Google Play Store</a></p>
+                    <!-- <p class="text-lg my-2 text-left">App: <a class="text-gray-600 underline" href="" target="blank">Google Play Store</a></p>
                     <p class="text-lg my-2 text-left">Code: <a class="text-gray-600 underline" href="" target="blank">Github Repo</a></p>
+                     -->
+                    <p class="text-lg my-2 text-left">App: (Link coming soon)</p>
+                    <p class="text-lg my-2 text-left">Code: (Link coming soon)</p>
 
                 </div>
             </div>
@@ -187,16 +189,17 @@
         {/if}
 	</div>
 	
+    <!-- About Me section -->
 	<div class="flex flex-col justify-center items-center about-section section bg-2 h-screen light-text bg-1">
         {#if scrollValue > heroSectionHeight*2.5 && scrollValue < heroSectionHeight*3.5}
         <h1 in:fly="{{x: 80, duration: 600 }}" out:fly="{{x: -80, duration: 600 }}" class="w-full text-center text-4xl mb-10">About Me</h1>
 
-        <p in:fly="{{x: -80, duration: 600 }}" out:fly="{{x: 80, duration: 600 }}" class="w-full lg:w-1/2 text-xl mb-10">I am a self-taugh developer. I started programming six years ago with the goal of making a game but things have changed quite a bit and now I am a university student and a freelancer.
-            I am a fan of minimalism, and I always try to create minimal, clean and good looking software.
-            If you want to chat with me, feel free to contact me through the form in the section below or on twitter (@karm0s).</p>
+        <p in:fly="{{x: -80, duration: 600 }}" out:fly="{{x: 80, duration: 600 }}" class="w-full lg:w-1/2 text-xl mb-10">I am a self-taught developer. I started programming six years ago with the goal of making a game but things have changed quite a bit and now I am a university student and a freelancer.
+            I am a fan of minimalism, and I always try to create minimal, clean and good looking software.</p>
         {/if}
     </div>
 
+    <!-- Contact section -->
 	<div class="flex flex-col justify-center contact-section section bg-1 h-screen dark-text">
         {#if scrollValue > heroSectionHeight*3.5}
         <h1 in:fly="{{x: -80, duration: 600 }}" out:fly="{{x: 80, duration: 600 }}" class="w-full text-center text-4xl mb-10">Contact Me</h1>
@@ -217,6 +220,7 @@
         {/if}
 	</div>
 
+    <!-- Footer -->
 	<div class="flex flex-col justify-center items-center footer-section section bg-2 light-text">
         <small>Hosted on Github</small>
         <small>&copy; Copyright {new Date().getFullYear()}, Yanis Bouchenna</small>
