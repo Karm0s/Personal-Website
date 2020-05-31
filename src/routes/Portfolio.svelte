@@ -25,7 +25,7 @@
 <svelte:window  bind:scrollY={scrollValue}/>
 <main class="text-gray-600" on:click={onClick}>
     <!-- Hero section  -->
-    <div class="flex justify-start bg-1 mobile-width md:h-screen dark-text px-8" bind:clientHeight={heroSectionHeight}>
+    <div class="flex justify-start bg-1 min-height md:h-screen dark-text px-8" bind:clientHeight={heroSectionHeight}>
         <!-- left side -->
         <div class="flex flex-col w-4/5">
         {#if scrollValue < heroSectionHeight/2}
@@ -54,8 +54,8 @@
     </div>
 
     <!-- Skills section -->
-	<div class="flex flex-col justify-center skills-section section bg-2 light-text pb-10 mobile-width lg:h-screen">
-        {#if scrollValue > heroSectionHeight/2 && scrollValue < heroSectionHeight*1.5}
+	<div class="flex flex-col justify-center skills-section lg:min-height bg-2 light-text pb-10 lg:h-screen">
+        {#if scrollValue > heroSectionHeight/2 && scrollValue < heroSectionHeight*2}
         <h1 in:fly="{{x: 80, duration: 600 }}" out:fly="{{x: -80, duration: 600 }}" class="w-full text-center text-4xl mb-10">My Skills</h1>
 
         <div class="flex flex-col lg:flex-row self-center">
@@ -134,8 +134,8 @@
 	</div>
 
     <!-- Projects section -->
-	<div class="flex flex-col justify-center projects-section section dark-text pb-10 bg-1 mobile-width lg:h-screen">
-        {#if scrollValue > heroSectionHeight*1.5 && scrollValue < heroSectionHeight*2.5}
+	<div class="flex flex-col justify-center projects-section lg:min-height dark-text pb-10 bg-1 lg:h-screen">
+        {#if scrollValue > heroSectionHeight*2 && scrollValue < heroSectionHeight*3}
         <h1 in:fly="{{x: -80, duration: 600 }}" out:fly="{{x: 80, duration: 600 }}" class="w-full text-center text-4xl mb-10">My Projects</h1>
 
         <div class="flex flex-col lg:flex-row self-center">
@@ -191,7 +191,7 @@
 	
     <!-- About Me section -->
 	<div class="flex flex-col justify-center items-center about-section section bg-2 h-screen light-text bg-1">
-        {#if scrollValue > heroSectionHeight*2.5 && scrollValue < heroSectionHeight*3.5}
+        {#if scrollValue > heroSectionHeight*3 && scrollValue < heroSectionHeight*4.5}
         <h1 in:fly="{{x: 80, duration: 600 }}" out:fly="{{x: -80, duration: 600 }}" class="w-full text-center text-4xl mb-10">About Me</h1>
 
         <p in:fly="{{x: -80, duration: 600 }}" out:fly="{{x: 80, duration: 600 }}" class="w-full lg:w-1/2 text-xl mb-10">I am a self-taught developer. I started programming six years ago with the goal of making a game but things have changed quite a bit and now I am a university student and a freelancer.
@@ -201,7 +201,7 @@
 
     <!-- Contact section -->
 	<div class="flex flex-col justify-center contact-section section bg-1 h-screen dark-text">
-        {#if scrollValue > heroSectionHeight*3.5}
+        {#if scrollValue > heroSectionHeight*4.5}
         <h1 in:fly="{{x: -80, duration: 600 }}" out:fly="{{x: 80, duration: 600 }}" class="w-full text-center text-4xl mb-10">Contact Me</h1>
 
         <div in:fly="{{y: 80, duration: 600 }}" out:fly="{{y: -80, duration: 600 }}" class="flex flex-row justify-center">
@@ -245,7 +245,13 @@
     .btn:hover{
         background-color: var(--blue);
     }
-    .mobile-width{
+    .min-height{
         min-height: 100vh;
+    }
+    .skills-section{
+        min-height: 140vh;
+    }
+    .projects-section{
+        min-height: 130vh;
     }
 </style>
